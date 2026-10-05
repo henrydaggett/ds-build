@@ -1,0 +1,67 @@
+:root {
+  /* Neutrals */
+  --ds-color-neutral-0: #ffffff;
+  --ds-color-neutral-50: #f7f7f8;
+  --ds-color-neutral-100: #eeeef0;
+  --ds-color-neutral-200: #dcdce0;
+  --ds-color-neutral-300: #c4c4ca;
+  --ds-color-neutral-500: #7d7d86;
+  --ds-color-neutral-700: #3f3f46;
+  --ds-color-neutral-900: #18181b;
+
+  /* Primary (ink) */
+  --ds-color-primary: #18181b;
+  --ds-color-primary-hover: #2e2e33;
+  --ds-color-primary-active: #000000;
+  --ds-color-primary-contrast: #ffffff;
+
+  /* Blue */
+  --ds-color-blue: #2563eb;
+  --ds-color-blue-hover: #1d4ed8;
+  --ds-color-blue-active: #1e40af;
+  --ds-color-blue-contrast: #ffffff;
+
+  /* Red */
+  --ds-color-red: #dc2626;
+  --ds-color-red-hover: #b91c1c;
+  --ds-color-red-active: #991b1b;
+  --ds-color-red-contrast: #ffffff;
+
+  /* Surfaces and text */
+  --ds-color-surface: var(--ds-color-neutral-0);
+  --ds-color-surface-hover: var(--ds-color-neutral-50);
+  --ds-color-surface-active: var(--ds-color-neutral-100);
+  --ds-color-border: var(--ds-color-neutral-200);
+  --ds-color-border-strong: var(--ds-color-neutral-300);
+  --ds-color-text: var(--ds-color-neutral-900);
+  --ds-color-text-muted: var(--ds-color-neutral-500);
+  --ds-color-disabled-bg: var(--ds-color-neutral-100);
+  --ds-color-disabled-text: var(--ds-color-neutral-500);
+
+  /* Focus */
+  --ds-focus-ring: 0 0 0 2px var(--ds-color-neutral-0), 0 0 0 4px var(--ds-color-blue);
+
+  /* Radius */
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 8px;
+  --ds-radius-lg: 10px;
+
+  /* Spacing */
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+
+  /* Typography */
+  --ds-font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ds-font-size-sm: 13px;
+  --ds-font-size-md: 14px;
+  --ds-font-size-lg: 16px;
+  --ds-font-weight-medium: 500;
+
+  /* Motion */
+  --ds-duration-fast: 120ms;
+  --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
