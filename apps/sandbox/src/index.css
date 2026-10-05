@@ -13,67 +13,43 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
 p {
   margin: 0;
 }
 
-.shell {
-  min-height: 100vh;
-}
-
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+.tabs {
   display: flex;
-  align-items: center;
-  gap: var(--ds-space-6);
-  height: 56px;
-  padding: 0 var(--ds-space-6);
-  border-bottom: 1px solid var(--ds-color-border);
-  background: color-mix(in srgb, var(--ds-color-surface) 85%, transparent);
-  backdrop-filter: blur(8px);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: var(--ds-space-2);
-  font-weight: 600;
-}
-
-.brand-mark {
-  width: 18px;
-  height: 18px;
-  border-radius: 5px;
-  background: linear-gradient(135deg, var(--ds-color-blue), var(--ds-color-primary));
-}
-
-.brand-tag {
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--ds-color-neutral-100);
-  color: var(--ds-color-text-muted);
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.nav {
-  display: flex;
+  flex-wrap: wrap;
   gap: var(--ds-space-1);
+  padding: var(--ds-space-3) var(--ds-space-6);
+  border-bottom: 1px solid var(--ds-color-border);
+  background: var(--ds-color-surface);
 }
 
-.nav-item {
+.tab {
   padding: 6px 10px;
   border-radius: var(--ds-radius-sm);
   color: var(--ds-color-text-muted);
   font-size: var(--ds-font-size-md);
   text-decoration: none;
+  white-space: nowrap;
 }
 
-.nav-item[aria-current='page'] {
+.tab-external-row {
+  flex-basis: 100%;
+}
+
+.tab-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tab:hover {
+  color: var(--ds-color-text);
+}
+
+.tab[aria-current='page'] {
   background: var(--ds-color-neutral-100);
   color: var(--ds-color-text);
 }
@@ -84,36 +60,7 @@ p {
   padding: 40px var(--ds-space-6) 80px;
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-space-6);
-}
-
-.page-header h1 {
-  font-size: 28px;
-  letter-spacing: -0.02em;
-}
-
-.page-header p,
-.section-header p {
-  margin-top: 6px;
-  max-width: 560px;
-  color: var(--ds-color-text-muted);
-  font-size: var(--ds-font-size-md);
-  line-height: 1.5;
-}
-
-.section-header {
-  margin-top: var(--ds-space-4);
-}
-
-.section-header h2 {
-  font-size: 18px;
-}
-
-.stage-card,
-.matrix-card {
+.stage-card {
   overflow: hidden;
   border: 1px solid var(--ds-color-border);
   border-radius: 12px;
@@ -123,27 +70,40 @@ p {
 .stage {
   display: grid;
   place-items: center;
-  min-height: 280px;
+  min-height: 320px;
   padding: var(--ds-space-6);
   background-color: var(--ds-color-surface);
   background-image: radial-gradient(var(--ds-color-neutral-200) 1px, transparent 1px);
   background-size: 16px 16px;
 }
 
-.stage-footer {
+.stage-inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--ds-space-3);
-  padding: var(--ds-space-3) var(--ds-space-4);
-  border-top: 1px solid var(--ds-color-border);
+  flex-direction: column;
 }
 
-.snippet {
-  overflow-x: auto;
-  white-space: nowrap;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+.stage-footer {
+  position: relative;
+  border-top: 1px solid var(--ds-color-border);
+  background: #282c34;
+  color-scheme: dark;
+}
+
+.snippet-copy {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  background: #282c34;
+}
+
+.snippet-view .cm-editor {
+  height: auto;
   font-size: 13px;
+}
+
+.snippet-view .cm-scroller {
+  height: auto;
 }
 
 .stage-note {
@@ -152,55 +112,9 @@ p {
   font-size: var(--ds-font-size-sm);
 }
 
-.matrix-scroll {
-  overflow-x: auto;
-}
-
-.matrix {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--ds-font-size-sm);
-}
-
-.matrix th,
-.matrix td {
-  padding: var(--ds-space-4);
-  border-bottom: 1px solid var(--ds-color-border);
-  text-align: left;
-  vertical-align: middle;
-}
-
-.matrix tbody tr:last-child th,
-.matrix tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.matrix thead th {
-  padding-block: var(--ds-space-3);
-  background: var(--ds-color-neutral-50);
-  color: var(--ds-color-text-muted);
-  font-weight: 500;
-  text-transform: capitalize;
-}
-
-.matrix tbody th {
-  white-space: nowrap;
-  font-weight: 500;
-}
-
-.variant-name {
-  text-transform: capitalize;
-}
-
-.variant-meta {
-  margin-left: 6px;
-  color: var(--ds-color-text-muted);
-  font-weight: 400;
-}
-
 @media (max-width: 640px) {
-  .topbar {
-    padding: 0 var(--ds-space-4);
+  .tabs {
+    padding-inline: var(--ds-space-4);
   }
 
   .content {

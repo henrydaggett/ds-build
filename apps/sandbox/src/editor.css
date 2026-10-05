@@ -1,0 +1,65 @@
+/* Shared by the generator editor and the sandbox snippet viewers. */
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #1e2127;
+  background: #21252b;
+}
+
+.toolbar-button {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: var(--ds-radius-sm);
+  background: transparent;
+  color: #abb2bf;
+  font: inherit;
+  font-size: var(--ds-font-size-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--ds-duration-fast) var(--ds-ease-standard),
+    color var(--ds-duration-fast) var(--ds-ease-standard);
+}
+
+.toolbar-button:hover {
+  background: rgb(255 255 255 / 0.06);
+  color: #ffffff;
+}
+
+.toolbar-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #528bff;
+}
+
+.code-editor .cm-editor.cm-focused {
+  outline: none;
+}
+
+.code-editor .cm-scroller {
+  padding-block: 20px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  line-height: 1.5;
+}
+
+/* The gutter is sticky, so the left padding lives on it (with an opaque background) to hide code scrolling underneath */
+.code-editor .cm-gutters {
+  padding-left: 20px;
+  border-right: none;
+  background: #282c34;
+}
+
+.code-editor .cm-lineNumbers .cm-gutterElement {
+  padding: 0 16px 0 0;
+}
+
+.code-editor .cm-content {
+  padding-right: 20px;
+}
+
+.code-editor .cm-line {
+  padding-left: 0;
+}

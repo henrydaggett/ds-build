@@ -1,0 +1,35 @@
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-4);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--ds-font-sans);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-1);
+}
+
+.legend {
+  padding: 0;
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-lg);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: 1.3;
+}
+
+.legend[data-disabled] {
+  color: var(--ds-color-disabled-text);
+}
+
+.description {
+  margin: 0;
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-font-size-sm);
+  line-height: 1.4;
+}

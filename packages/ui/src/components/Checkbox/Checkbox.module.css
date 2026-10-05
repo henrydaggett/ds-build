@@ -1,0 +1,108 @@
+.checkbox {
+  display: flex;
+}
+
+.checkbox[data-size='small'] {
+  --checkbox-box: 14px;
+  --checkbox-radius: 3px;
+  --checkbox-gap: 6px;
+  --checkbox-font-size: var(--ds-font-size-sm);
+}
+
+.checkbox[data-size='medium'] {
+  --checkbox-box: 16px;
+  --checkbox-radius: 4px;
+  --checkbox-gap: var(--ds-space-2);
+  --checkbox-font-size: var(--ds-font-size-md);
+}
+
+.checkbox[data-size='large'] {
+  --checkbox-box: 18px;
+  --checkbox-radius: 5px;
+  --checkbox-gap: 10px;
+  --checkbox-font-size: var(--ds-font-size-lg);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--checkbox-gap);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+  font-size: var(--checkbox-font-size);
+  line-height: 1.3;
+  cursor: pointer;
+  user-select: none;
+}
+
+.label[data-disabled],
+.label:has(> .box[data-disabled]) {
+  color: var(--ds-color-disabled-text);
+  cursor: not-allowed;
+}
+
+.box {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--checkbox-box);
+  height: var(--checkbox-box);
+  border: 1px solid var(--ds-color-border-strong);
+  border-radius: var(--checkbox-radius);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-primary-contrast);
+  cursor: pointer;
+  transition:
+    background-color var(--ds-duration-fast) var(--ds-ease-standard),
+    border-color var(--ds-duration-fast) var(--ds-ease-standard);
+}
+
+.label:hover .box:not([data-disabled], [data-checked], [data-indeterminate]),
+.box:hover:not([data-disabled], [data-checked], [data-indeterminate]) {
+  border-color: var(--ds-color-neutral-500);
+}
+
+.box[data-checked],
+.box[data-indeterminate] {
+  border-color: var(--ds-color-primary);
+  background: var(--ds-color-primary);
+}
+
+.box:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+}
+
+.box[data-invalid] {
+  border-color: var(--ds-color-red);
+}
+
+.box[data-disabled] {
+  border-color: var(--ds-color-border);
+  background: var(--ds-color-disabled-bg);
+  color: var(--ds-color-disabled-text);
+  cursor: not-allowed;
+}
+
+.indicator {
+  display: flex;
+  font-size: calc(var(--checkbox-box) - 2px);
+}
+
+.indicator svg {
+  stroke-width: 3;
+}
+
+.indicator[data-unchecked]:not([data-indeterminate]) {
+  visibility: hidden;
+}
+
+.minus,
+.indicator[data-indeterminate] .check {
+  display: none;
+}
+
+.indicator[data-indeterminate] .minus {
+  display: block;
+}

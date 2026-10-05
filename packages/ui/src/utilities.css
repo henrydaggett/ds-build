@@ -1,0 +1,106 @@
+/* Typography */
+.ds-h1,
+.ds-h2,
+.ds-h3,
+.ds-h4,
+.ds-h5,
+.ds-h6,
+.ds-text-large,
+.ds-text-medium,
+.ds-text-small {
+  margin: 0;
+  font-family: var(--ds-font-sans);
+  color: var(--ds-color-text);
+}
+
+.ds-h1,
+.ds-h2,
+.ds-h3,
+.ds-h4,
+.ds-h5,
+.ds-h6 {
+  font-weight: var(--ds-font-weight-semibold);
+}
+
+.ds-h1 { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; }
+.ds-h2 { font-size: 28px; line-height: 36px; letter-spacing: -0.015em; }
+.ds-h3 { font-size: 24px; line-height: 32px; letter-spacing: -0.01em; }
+.ds-h4 { font-size: 20px; line-height: 28px; }
+.ds-h5 { font-size: 18px; line-height: 26px; }
+.ds-h6 { font-size: var(--ds-font-size-lg); line-height: 24px; }
+
+.ds-text-large,
+.ds-text-medium,
+.ds-text-small {
+  font-weight: var(--ds-font-weight-regular);
+}
+
+.ds-text-large { font-size: var(--ds-font-size-lg); line-height: 24px; }
+.ds-text-medium { font-size: var(--ds-font-size-md); line-height: 20px; }
+.ds-text-small { font-size: var(--ds-font-size-sm); line-height: 18px; }
+
+/* Spacing: kept after typography so margin utilities override the typography reset */
+.ds-gap-4 { gap: var(--ds-space-1); }
+.ds-gap-8 { gap: var(--ds-space-2); }
+.ds-gap-12 { gap: var(--ds-space-3); }
+.ds-gap-16 { gap: var(--ds-space-4); }
+.ds-gap-20 { gap: var(--ds-space-5); }
+.ds-gap-24 { gap: var(--ds-space-6); }
+.ds-gap-32 { gap: var(--ds-space-8); }
+.ds-gap-48 { gap: var(--ds-space-12); }
+
+.ds-p-0 { padding: 0; }
+.ds-p-4 { padding: var(--ds-space-1); }
+.ds-p-8 { padding: var(--ds-space-2); }
+.ds-p-12 { padding: var(--ds-space-3); }
+.ds-p-16 { padding: var(--ds-space-4); }
+.ds-p-20 { padding: var(--ds-space-5); }
+.ds-p-24 { padding: var(--ds-space-6); }
+.ds-p-32 { padding: var(--ds-space-8); }
+.ds-p-48 { padding: var(--ds-space-12); }
+
+.ds-px-4 { padding-inline: var(--ds-space-1); }
+.ds-px-8 { padding-inline: var(--ds-space-2); }
+.ds-px-12 { padding-inline: var(--ds-space-3); }
+.ds-px-16 { padding-inline: var(--ds-space-4); }
+.ds-px-20 { padding-inline: var(--ds-space-5); }
+.ds-px-24 { padding-inline: var(--ds-space-6); }
+.ds-px-32 { padding-inline: var(--ds-space-8); }
+.ds-px-48 { padding-inline: var(--ds-space-12); }
+
+.ds-py-4 { padding-block: var(--ds-space-1); }
+.ds-py-8 { padding-block: var(--ds-space-2); }
+.ds-py-12 { padding-block: var(--ds-space-3); }
+.ds-py-16 { padding-block: var(--ds-space-4); }
+.ds-py-20 { padding-block: var(--ds-space-5); }
+.ds-py-24 { padding-block: var(--ds-space-6); }
+.ds-py-32 { padding-block: var(--ds-space-8); }
+.ds-py-48 { padding-block: var(--ds-space-12); }
+
+.ds-m-0 { margin: 0; }
+.ds-m-4 { margin: var(--ds-space-1); }
+.ds-m-8 { margin: var(--ds-space-2); }
+.ds-m-12 { margin: var(--ds-space-3); }
+.ds-m-16 { margin: var(--ds-space-4); }
+.ds-m-20 { margin: var(--ds-space-5); }
+.ds-m-24 { margin: var(--ds-space-6); }
+.ds-m-32 { margin: var(--ds-space-8); }
+.ds-m-48 { margin: var(--ds-space-12); }
+
+.ds-mt-4 { margin-top: var(--ds-space-1); }
+.ds-mt-8 { margin-top: var(--ds-space-2); }
+.ds-mt-12 { margin-top: var(--ds-space-3); }
+.ds-mt-16 { margin-top: var(--ds-space-4); }
+.ds-mt-20 { margin-top: var(--ds-space-5); }
+.ds-mt-24 { margin-top: var(--ds-space-6); }
+.ds-mt-32 { margin-top: var(--ds-space-8); }
+.ds-mt-48 { margin-top: var(--ds-space-12); }
+
+.ds-mb-4 { margin-bottom: var(--ds-space-1); }
+.ds-mb-8 { margin-bottom: var(--ds-space-2); }
+.ds-mb-12 { margin-bottom: var(--ds-space-3); }
+.ds-mb-16 { margin-bottom: var(--ds-space-4); }
+.ds-mb-20 { margin-bottom: var(--ds-space-5); }
+.ds-mb-24 { margin-bottom: var(--ds-space-6); }
+.ds-mb-32 { margin-bottom: var(--ds-space-8); }
+.ds-mb-48 { margin-bottom: var(--ds-space-12); }

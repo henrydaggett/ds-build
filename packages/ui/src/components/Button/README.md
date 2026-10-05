@@ -1,9 +1,9 @@
-# Button
+# DsButton
 
 Triggers an action. Built on the [Base UI Button](https://base-ui.com/react/components/button), which provides button semantics, keyboard handling, and disabled behavior.
 
 ```tsx
-import { Button } from '@ds-build/ui';
+import { DsButton } from '@ds-build/ui';
 ```
 
 ## Props
@@ -30,13 +30,13 @@ All other native button props (`onClick`, `type`, `aria-*`, …) and Base UI pro
 ## Examples
 
 ```tsx
-<Button>Save changes</Button>
+<DsButton>Save changes</DsButton>
 
-<Button color="blue" icon>New project</Button>
+<DsButton color="blue" icon>New project</DsButton>
 
-<Button color="red" icon iconNode={<TrashIcon />}>Delete</Button>
+<DsButton color="red" icon iconNode={<DsTrashIcon />}>Delete</DsButton>
 
-<Button appearance="outline" size="small">Cancel</Button>
+<DsButton appearance="outline" size="small">Cancel</DsButton>
 
-<Button size="large" disabled>Publishing…</Button>
+<DsButton size="large" disabled>Publishing…</DsButton>
 ```

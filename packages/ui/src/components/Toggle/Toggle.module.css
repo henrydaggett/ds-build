@@ -1,0 +1,96 @@
+/*
+ * A DsToggleGroup restyles its toggles through these custom properties:
+ * --toggle-border, --toggle-off-bg, --toggle-off-bg-hover, --toggle-on-bg,
+ * --toggle-on-shadow, --toggle-inset, --toggle-radius-inset.
+ */
+.toggle {
+  --_height: calc(var(--toggle-height) - var(--toggle-inset, 0px));
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--toggle-gap);
+  height: var(--_height);
+  padding: 0 var(--toggle-padding-x);
+  border: 1px solid var(--toggle-border, var(--ds-color-border-strong));
+  border-radius: calc(var(--toggle-radius) - var(--toggle-radius-inset, 0px));
+  background: var(--toggle-off-bg, var(--ds-color-surface));
+  color: var(--ds-color-neutral-700);
+  font-family: var(--ds-font-sans);
+  font-size: var(--toggle-font-size);
+  font-weight: var(--ds-font-weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--ds-duration-fast) var(--ds-ease-standard),
+    color var(--ds-duration-fast) var(--ds-ease-standard),
+    box-shadow var(--ds-duration-fast) var(--ds-ease-standard);
+}
+
+/* Sizes (match DsButton) */
+.toggle[data-size='small'] {
+  --toggle-height: 28px;
+  --toggle-padding-x: var(--ds-space-3);
+  --toggle-gap: 6px;
+  --toggle-radius: var(--ds-radius-sm);
+  --toggle-font-size: var(--ds-font-size-sm);
+  --toggle-icon-size: 14px;
+}
+
+.toggle[data-size='medium'] {
+  --toggle-height: 36px;
+  --toggle-padding-x: var(--ds-space-4);
+  --toggle-gap: var(--ds-space-2);
+  --toggle-radius: var(--ds-radius-md);
+  --toggle-font-size: var(--ds-font-size-md);
+  --toggle-icon-size: 16px;
+}
+
+.toggle[data-size='large'] {
+  --toggle-height: 44px;
+  --toggle-padding-x: var(--ds-space-5);
+  --toggle-gap: var(--ds-space-2);
+  --toggle-radius: var(--ds-radius-lg);
+  --toggle-font-size: var(--ds-font-size-lg);
+  --toggle-icon-size: 18px;
+}
+
+.toggle[data-icon-only] {
+  width: var(--_height);
+  padding: 0;
+}
+
+/* States */
+.toggle:hover:not([data-disabled], [data-pressed]) {
+  background: var(--toggle-off-bg-hover, var(--ds-color-surface-hover));
+  color: var(--ds-color-text);
+}
+
+.toggle[data-pressed] {
+  background: var(--toggle-on-bg, var(--ds-color-surface-active));
+  box-shadow: var(--toggle-on-shadow, none);
+  color: var(--ds-color-text);
+}
+
+.toggle:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+}
+
+.toggle[data-disabled] {
+  border-color: var(--toggle-border, var(--ds-color-border));
+  color: var(--ds-color-disabled-text);
+  cursor: not-allowed;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: var(--toggle-icon-size);
+}
+
+.label {
+  display: inline-flex;
+}

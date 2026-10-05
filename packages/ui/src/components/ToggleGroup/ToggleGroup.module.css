@@ -1,0 +1,37 @@
+/*
+ * Segmented-control look: a grey track with borderless toggles.
+ * The pressed toggle becomes a raised white segment.
+ * Inset = 2 × (1px border + 3px padding), so the group matches DsButton heights.
+ */
+.group {
+  --toggle-border: transparent;
+  --toggle-off-bg: transparent;
+  --toggle-off-bg-hover: transparent;
+  --toggle-on-bg: var(--ds-color-surface);
+  --toggle-on-shadow: 0 1px 2px rgb(24 24 27 / 0.12);
+  --toggle-inset: 8px;
+  --toggle-radius-inset: 4px;
+
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--group-radius);
+  background: var(--ds-color-surface-active);
+}
+
+.group[data-size='small'] {
+  --group-radius: var(--ds-radius-sm);
+}
+
+.group[data-size='medium'] {
+  --group-radius: var(--ds-radius-md);
+}
+
+.group[data-size='large'] {
+  --group-radius: var(--ds-radius-lg);
+}
+
+.group[data-orientation='vertical'] {
+  flex-direction: column;
+}

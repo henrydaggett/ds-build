@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { DialRoot } from 'dialkit';
 import 'dialkit/styles.css';
 import '@ds-build/ui/tokens.css';
+import './editor.css';
 import './index.css';
 import App from './App.tsx';
 

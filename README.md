@@ -33,7 +33,16 @@ pnpm build        # typecheck the UI package and build the sandbox
 
 | Component | Docs |
 | --- | --- |
-| Button | [packages/ui/src/components/Button/README.md](packages/ui/src/components/Button/README.md) |
+| DsButton | [packages/ui/src/components/Button/README.md](packages/ui/src/components/Button/README.md) |
+| DsToggle | [packages/ui/src/components/Toggle/README.md](packages/ui/src/components/Toggle/README.md) |
+| DsToggleGroup | [packages/ui/src/components/ToggleGroup/README.md](packages/ui/src/components/ToggleGroup/README.md) |
+| DsTextInput | [packages/ui/src/components/TextInput/README.md](packages/ui/src/components/TextInput/README.md) |
+| DsSelect | [packages/ui/src/components/Select/README.md](packages/ui/src/components/Select/README.md) |
+| DsCheckbox | [packages/ui/src/components/Checkbox/README.md](packages/ui/src/components/Checkbox/README.md) |
+| DsCheckboxGroup | [packages/ui/src/components/CheckboxGroup/README.md](packages/ui/src/components/CheckboxGroup/README.md) |
+| DsField | [packages/ui/src/components/Field/README.md](packages/ui/src/components/Field/README.md) |
+| DsFieldset | [packages/ui/src/components/Fieldset/README.md](packages/ui/src/components/Fieldset/README.md) |
+| DsForm | [packages/ui/src/components/Form/README.md](packages/ui/src/components/Form/README.md) |
 
 ## Using the package
 
@@ -41,9 +50,9 @@ The sandbox consumes `@ds-build/ui` from source through the pnpm workspace. Impo
 
 ```tsx
 import '@ds-build/ui/tokens.css';
-import { Button } from '@ds-build/ui';
+import { DsButton } from '@ds-build/ui';
 
-<Button color="blue" icon>New project</Button>
+<DsButton color="blue" icon>New project</DsButton>
 ```
 
 ## Adding a component
